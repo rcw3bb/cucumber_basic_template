@@ -32,7 +32,7 @@ The sample **cucumber feature file** is called **is_it_friday_yet.feature** and 
 
 # Sample Cucumber Runner File
 
-The sample **cucumber runner file** is called **CucumberRunner.java** and is located in the following location:
+The sample **cucumber runner file** is called **CucumberRunner.java** and is located in the following directory:
 
 ```
 <LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber
@@ -42,7 +42,7 @@ The sample **cucumber runner file** is called **CucumberRunner.java** and is loc
 
 # Sample Step Definition
 
-The sample **step definition file** is called **IsItFridayYetStepdefs.java** and is located in the following location:
+The sample **step definition file** is called **IsItFridayYetStepdefs.java** and is located in the following directory:
 
 ```
 <LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber
