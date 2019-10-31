@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group 'xyz.ronella.testing.cucumber'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url 'https://repo.ronella.xyz/archiva/repository/internal/'
+        credentials {
+            username "${archivaUsername}"
+            password "${archivaPassword}"
+        }
+    }
+    maven {
+        url 'https://repo.ronella.xyz/archiva/repository/snapshots/'
+        credentials {
+            username "${archivaUsername}"
+            password "${archivaPassword}"
+        }
+    }
+}
+
+dependencies {
+    testImplementation "io.cucumber:cucumber-java:${cucumber_version}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumber_version}"
+}
