@@ -22,7 +22,7 @@ Read the build file for the pre-requisites.
 
 # Sample Feature File
 
-The sample **cucumber feature file** is called **is_it_friday_yet.features** and is located in the following directory:
+The sample **cucumber feature file** is called **is_it_friday_yet.feature** and is located in the following directory:
 
 ```
 <LOCAL_CLONED_REPO_DIR>\src\test\resources\gradle\cucumber
@@ -53,4 +53,3 @@ The sample **step definition file** is called **IsItFridayYetStepdefs.java** and
 ## Author
 
 * Ronaldo Webb
-
