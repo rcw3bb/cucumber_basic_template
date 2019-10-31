@@ -10,7 +10,7 @@ Read the build file for the pre-requisites.
 
 1. **Clone** this repository on your local.
 
-2. Remove the **.git folder** from where you cloned the repository.
+2. Remove the **.git folder** from where you've cloned the repository.
 
 3. Run the following command:
 
@@ -28,7 +28,7 @@ The sample **cucumber feature file** is called **is_it_friday_yet.feature** and 
 <LOCAL_CLONED_REPO_DIR>\src\test\resources\gradle\cucumber
 ```
 
-> The **LOCAL_CLONED_REPO_DIR** is where you cloned this repository.
+> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
 
 # Sample Cucumber Runner File
 
@@ -38,7 +38,7 @@ The sample **cucumber runner file** is called **CucumberRunner.java** and is loc
 <LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber
 ```
 
-> The **LOCAL_CLONED_REPO_DIR** is where you cloned this repository.
+> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
 
 # Sample Step Definition
 
@@ -48,7 +48,7 @@ The sample **step definition file** is called **IsItFridayYetStepdefs.java** and
 <LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber
 ```
 
-> The **LOCAL_CLONED_REPO_DIR** is where you cloned this repository.
+> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
 
 ## Author
 
