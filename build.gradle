@@ -1,7 +1,13 @@
+import org.apache.commons.io.output.ByteArrayOutputStream
+
 apply plugin: 'java'
 
-sourceCompatibility = 11
-targetCompatibility = 11
+ext {
+    cucumber_version = "4.2.0"
+}
+
+sourceCompatibility = 8
+targetCompatibility = 8
 
 group 'xyz.ronella.testing.cucumber'
 version '1.0-SNAPSHOT'
@@ -23,8 +29,53 @@ repositories {
     }
 }
 
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.ronella.xyz/archiva/repository/internal/'
+            credentials {
+                username "${archivaUsername}"
+                password "${archivaPassword}"
+            }
+        }
+        maven {
+            url 'https://repo.ronella.xyz/archiva/repository/snapshots/'
+            credentials {
+                username "${archivaUsername}"
+                password "${archivaPassword}"
+            }
+        }
+    }
+    dependencies {
+        classpath group: 'commons-io', name: 'commons-io', version: '2.6'
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force group: 'io.cucumber', name: 'cucumber-core', version: "${cucumber_version}"
+    }
+}
+
 dependencies {
-    testImplementation group: 'io.cucumber', name: 'cucumber-java8', version: "${cucumber_version}"
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: "${cucumber_version}"
+    testImplementation group: 'io.cucumber', name: 'cucumber-core', version: "${cucumber_version}"
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${cucumber_version}"
     testImplementation group: 'io.cucumber', name: 'gherkin', version: '5.2.0'
+    testImplementation group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.82'
+    testImplementation group: 'net.serenity-bdd', name: 'serenity-cucumber4', version: '1.0.21'
 }
+
+task aggregate {
+    doLast {
+        def output = new ByteArrayOutputStream()
+        exec {
+            executable 'mvn.cmd'
+            args 'serenity:aggregate'
+            standardOutput = output
+        }
+        print output
+    }
+}
+
+test.finalizedBy(aggregate)

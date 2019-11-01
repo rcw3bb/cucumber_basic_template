@@ -1,11 +1,13 @@
 package gradle.cucumber;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+
+import cucumber.api.CucumberOptions;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(plugin = "pretty",
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(
+        plugin = "pretty",
         glue = "gradle.cucumber.step",
         features = "src/test/resources/features")
 public class CucumberRunner {
