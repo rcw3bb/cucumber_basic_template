@@ -15,7 +15,7 @@ Read the build file for the pre-requisites.
 3. Run the following command:
 
    ```
-   gradlew test --info
+   gradlew test
    ```
 
    > If it completes successfully your setup is good.
@@ -52,6 +52,16 @@ The sample **step definition file** is called **IsItFridayYetStepdefs.java** and
 
 ```
 <LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber\step
+```
+
+> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
+
+# Serenity BDD Report
+
+Look for the **index.html** file in the following directory **after running the test**:
+
+```
+<LOCAL_CLONED_REPO_DIR>\target\site\serenity
 ```
 
 > The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
