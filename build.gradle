@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: "${cucumber_version}"
+    testImplementation group: 'io.cucumber', name: 'cucumber-java8', version: "${cucumber_version}"
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${cucumber_version}"
+    testImplementation group: 'io.cucumber', name: 'gherkin', version: '5.2.0'
 }

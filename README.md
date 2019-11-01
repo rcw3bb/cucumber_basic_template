@@ -25,10 +25,16 @@ Read the build file for the pre-requisites.
 The sample **cucumber feature file** is called **is_it_friday_yet.feature** and is located in the following directory:
 
 ```
-<LOCAL_CLONED_REPO_DIR>\src\test\resources\gradle\cucumber
+<LOCAL_CLONED_REPO_DIR>\src\test\resources\features\sample
 ```
 
-> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
+> The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository. 
+>
+> The following URLs can be of a great help for creating this file:
+>
+> * https://cucumber.io/docs/gherkin/reference/
+>
+> * https://cucumber.io/docs/cucumber/cucumber-expressions/ 
 
 # Sample Cucumber Runner File
 
@@ -45,7 +51,7 @@ The sample **cucumber runner file** is called **CucumberRunner.java** and is loc
 The sample **step definition file** is called **IsItFridayYetStepdefs.java** and is located in the following directory:
 
 ```
-<LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber
+<LOCAL_CLONED_REPO_DIR>\src\test\java\gradle\cucumber\step
 ```
 
 > The **LOCAL_CLONED_REPO_DIR** is where you've cloned this repository.
